@@ -1,0 +1,40 @@
+.navbar{
+    max-height: 50px;
+    word-wrap: break-word;
+}
+
+.navbar__search{
+    max-height: 20px;
+    font-size: 13px !important;
+}
+
+.dropdown-item {
+    font-family: Sans-serif	 !important;
+    font-size: .9rem !important;
+    padding: 5px !important;
+    color: rgb(29, 28, 27);
+}
+
+.nav__profimg {
+    border-radius: 50% ;
+    height: 30px;
+    width: 30px;
+    border: 1px lightgray solid;
+    margin-left: 20px;
+    object-fit: cover;
+}
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.navbar__link{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.fa-facebook-messenger{
+    margin-left: 20px;
+
+}
+

@@ -1,0 +1,14 @@
+.signup{
+    max-width: 40%;
+    margin: auto;
+    margin-top: 50px;
+}
+.signup__data{
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 33% !important;
+}
+
+.card-body form{
+    flex-direction: column !important;
+}

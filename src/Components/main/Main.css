@@ -1,0 +1,38 @@
+.Main{
+    margin-top: 50px;
+    position: relative;
+
+}
+
+.Main__addPost {
+    bottom:20px;
+    left: 20px;
+    position:fixed;
+    z-index:150;
+    
+    width: 60px !important;
+    height: 60px !important;
+    padding: 10px 16px !important;
+    border-radius: 35px !important;
+
+}
+
+.Main__addPost > .btn{
+    font-size: 5em !important;
+}
+
+.dropdown-menu.show {
+    border: 1px solid lightgray !important;
+}
+
+
+.modal-footer form {
+    min-width: 100%;
+}
+
+.modal-footer .btn-link {
+    font-weight: 400;
+    color: black;
+    /* text-decoration: none; */
+    padding: 0 !important;
+}

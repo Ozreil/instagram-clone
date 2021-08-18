@@ -1,0 +1,27 @@
+#fullpost .modal-content {
+    flex-direction: row !important;
+    align-items: center;
+    flex: 0.75 !important;
+    min-width: 75% !important;
+    margin: auto !important;
+}
+
+.fullpost__image {
+    flex: .65 !important;
+    background-color: black;
+    display: flex !important;
+    object-fit: cover;
+}
+.fullpost__image img {
+    flex: .65 !important;
+    margin: auto;
+}
+
+.fullpost__sidedata {
+    flex: .35 !important;
+}
+
+.modal-body {
+    overflow: scroll;
+    height: 160px;
+}

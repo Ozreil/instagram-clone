@@ -1,0 +1,104 @@
+.Edit{
+    display: flex;
+    border: 1px solid lightgray;
+    max-width: 50vw;
+    height: 80vh;
+    margin:auto;
+    margin-top: 70px;
+    background-color: white;
+
+}
+
+.Edit__Data{
+    margin-top: 50px;
+    flex: .75 !important;
+    overflow: scroll;
+}
+
+.Edit__side {
+    border-right: solid 1px lightgray;
+    flex: .25 !important;
+    margin: 0 !important;
+
+}
+
+.Edit__tab1 > .nav-link {
+    border-radius: 0 !important;
+    min-height: 40px;
+    color: gray;
+    text-align: left !important;
+    padding: 16px 16px 16px 30px !important;
+
+}
+
+.Edit__tab1 > .active {
+    border: transparent !important;
+    border-left: 3px solid !important;
+    margin-top: 0 !important;
+    min-height: 40px;
+    background-color: white !important;
+
+}
+
+.Edit__side .col-sm-3{
+    padding-left: 0 !important;
+}
+
+.nav-link {
+    border-radius: 0 !important;
+}
+
+.col-sm-3{
+    padding-left: 0 !important;
+}
+
+
+.Edit__DataTab{
+    flex-direction: column !important;
+    background-color: white !important;
+    margin: 50px !important;
+}
+
+.Edit__DataTabGroup{
+    display: flex;
+}
+
+.Edit__DataTabGroup .form-label{
+    color: #262626 !important; 
+    font-size: 16px ;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+    text-align: left !important;
+    margin-right: 2em !important;
+}
+
+.tab-content>.active {
+    background: white !important;
+}
+
+.Edit__Data p {
+    margin-top: 15px;
+    font-size: 16px ;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.Edit__Data img {
+    margin: 0;
+}
+
+.Edit__DataTabGroup > .form-control-file > #file-upload-button{
+    background-color: #262626 !important;
+}
+
+.Edit__DataTab .form-label{
+    flex: .3;
+}
+
+.Edit__DataTab .form-control, .form-control-file{
+    flex: .7;
+}
+
+.form-control-file > #file-upload-button{
+    background-color: rgb(37, 3, 189) !important;
+}

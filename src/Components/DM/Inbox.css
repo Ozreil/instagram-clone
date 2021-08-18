@@ -1,0 +1,148 @@
+.inbox{
+    display: flex;
+    width: 60vw;
+    height: 80vh;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+}
+
+.inbox__Sidebar{
+    flex: .35;
+    overflow:auto;
+    min-width: 10vw;
+}
+
+.inbox__chat{
+    flex: .65;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    border-radius : 0 0.25em 0.25em 0;
+}
+
+.list-group{
+    overflow:auto;
+}
+
+.inbox__chatPhoto{
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+    margin-right: 10px;
+    object-fit: cover;
+
+}
+
+.inbox__chatHeader{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    align-items: center ;
+    padding: 10px;
+    min-height: 62px;
+}
+
+.inbox__SidebarHeader{
+    padding: 10px;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+    min-height: 62px;
+}
+
+.inbox__Sidebar{
+    border: 1px solid lightgray;
+    border-radius : 0.25em 0 0 0.25em;
+}
+
+p a {
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+p a:hover{
+    font-weight: bold !important;
+    text-decoration: underline !important;
+    color: black ;
+}
+p span {
+    display: block;
+    font-size: 12px;
+    color: gray;
+    text-align: left;
+
+}
+p{
+    margin-bottom: 0 !important;
+}
+
+.inbox__chatHeaderInfo {
+    margin-left: auto !important;
+    size: 100px !important;
+}
+
+.mb-3{
+    margin-top: auto;
+    padding: 0 10px 0 10px;
+    border-radius: 50%  ;
+}
+
+
+.inbox__chatBody__mine{
+    display: flex;
+    margin-left: auto;
+    background-color: lightgrey;
+    position: relative;
+    width: fit-content;
+    font-size: 16px;
+    border-radius:  50em;
+    margin-top: 10px;
+}
+
+.inbox__chatBody__his{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.inbox__noChatPhoto{
+    display: none;
+}
+
+.inbox__chatBodyImage{
+    display: inline-block;
+}
+
+.inbox__chats{
+    border: lightgray 1px solid ;
+    font-size: 16px;
+    border-radius:  50em;
+    padding: 10px;
+}
+
+.chat__body{
+    flex: 1;
+    padding: 30px;
+    overflow-y: scroll;
+    margin-top: auto !important;
+    min-height: auto !important;
+    height: max-content !important;
+    
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 0 !important;
+}
+
+.inbox__chatHeader p a {
+    color: black !important;
+}
+
+.inbox__chatHeader:hover{
+    background-color: lightgray;
+}
