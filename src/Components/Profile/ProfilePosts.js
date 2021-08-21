@@ -3,11 +3,7 @@ import './Profile.css';
 import {Tabs,Tab,Card, Row, Col} from 'react-bootstrap';
 
 function ProfilePosts({ID ,MyPosts, savedPosts}) {
-    useEffect(() => {
-   
-        console.log("the saved posts are ", savedPosts);
-        
-    }, [])
+
     return (
         <div>
             <Tabs

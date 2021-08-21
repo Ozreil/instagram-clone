@@ -21,7 +21,6 @@ function FullPost(props) {
         if(props.postInfo?.commentList.length > 0)  {
             let latestComment = props.postInfo?.commentList.slice(-1);
             let words =  latestComment[0].split("_")
-            console.log(Number(words[3]))
             num += Number(words[3]) ;
         }
         const commentData ={
@@ -32,7 +31,6 @@ function FullPost(props) {
             time: Math.floor(Date.now() / 1000),
         }
 
-        console.log("the comment object ", commentData);
         e.target.reset();
 
         props.fullPostAddComment(commentData, props.postInfo);

@@ -40,9 +40,7 @@ function Messages({messageId, userPhoto}) {
 
     function getTheImage(){
         if(roomId){
-            console.log("befooore  what ", userPhoto);
             const currentChat =  userPhoto?.find(element => element.messageId == roomId);
-            console.log("noooooooow what ", currentChat);
             if(currentChat?.chatData.user1[0] === currentUserData.userData?.userId){
                 setPhoto(currentChat?.chatData.user2[1]);
                 setRoomName(currentChat?.chatData.user2[2]);
@@ -52,13 +50,11 @@ function Messages({messageId, userPhoto}) {
 
             }
 
-            console.log("the current photo is ", photo);
         }
 
     }
 
     useEffect(() => {
-        console.log("In messssssage ",userPhoto );
         fetchMessages();
         getTheImage();
         return ;

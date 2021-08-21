@@ -31,18 +31,15 @@ function Edit() {
         } 
     
         fetchData(); 
-        console.log("the data main in useeffect ", newUserData);
         
       },[currentUserData]);
 
     const handleSubmit = (e) =>{
 
         e.preventDefault();
-        console.log("The userName ", newUserName.current.value);
-        console.log("The caption  ", newCaption.current.value);
+        
         setNewStatus(newCaption.current.value);
         setUserNameState( newUserName.current.value);
-        console.log(`users/${currentUserData?.userData.userId}/profile/${addPostImg.name}`);
         const uploadTask = storage.ref(`users/${currentUserData?.userData.userId}/profile/${addPostImg.name}`).put(addPostImg);
     
     
@@ -50,7 +47,7 @@ function Edit() {
             "state_changed",
             snapshot =>{},
             error => {
-            console.log("error");
+            console.log("error", error);
             },
             ()=>{
             storage
@@ -83,7 +80,6 @@ function Edit() {
     const handleChange = e => {
         if (e.target.files[0]) {
           setAddPostImg(e.target.files[0]);
-          console.log("The Image files ", e.target.files[0]);
         }
     };
 

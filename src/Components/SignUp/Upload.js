@@ -23,15 +23,11 @@ function Upload() {
 
         e.preventDefault();
 
-
-        console.log("The userName ", userName.current.value);
-        console.log("The caption  ", caption.current.value);
         setNewStatus(caption.current.value);
         setUserNameState( userName.current.value);
         const name = userName.current.value;
         const capt = caption.current.value;
         const userId = currentUser.uid;
-        console.log(`users/${userId}/profile/${addPostImg.name}`);
         const uploadTask = storage.ref(`users/${userId}/profile/${addPostImg.name}`).put(addPostImg);
     
     
@@ -63,7 +59,6 @@ function Upload() {
                     userId:userId,
                 };
                 
-                console.log("update the database ", newUser);
                 //update the database 
                 firebase.firestore().collection("users").doc(userId).set(newUser)
                 .then(() => {
@@ -72,7 +67,6 @@ function Upload() {
                 .catch((error) => {
                     console.error("Error writing document: ", error);
                 });
-                console.log("finish update the database ")
 
             })
             }
@@ -86,7 +80,6 @@ function Upload() {
     const handleChange = (e) =>{
         if (e.target.files[0]) {
             setAddPostImg(e.target.files[0]);
-            console.log("The Image files ", e.target.files[0]);
         }
     }
 

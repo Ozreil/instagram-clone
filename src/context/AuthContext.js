@@ -31,7 +31,6 @@ export function AuthProvider({children}) {
             }  
 
             snapshot.forEach(doc => {
-                console.log(doc.id, '=>', doc.data());
                 setCurrentUserData({userData: doc.data(), userDocId: doc.id});
             });
         }
@@ -50,7 +49,6 @@ export function AuthProvider({children}) {
     
         //run this useEffect after the current user changes and it has a value
         getTheCurrentUserData();
-        console.log("the user data in context ",currentUserData);
         return;
     
     },[currentUser]);

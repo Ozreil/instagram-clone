@@ -47,12 +47,10 @@ function Posts(props) {
     }
 
     const deleteClicked = () => {
-        console.log("The Delete clicked ");
         props.deletePost(props.postInfo?.postId, props.postInfo?.img);
     }   
     
     const hideClicked = () => {
-        console.log("The Hide clicked ");
         props.hidePost(props.postInfo?.postId);
     }
 
@@ -63,7 +61,6 @@ function Posts(props) {
         if(props.postInfo?.commentList.length > 0)  {
             let latestComment = props.postInfo?.commentList.slice(-1);
             let words =  latestComment[0].split("_")
-            console.log(Number(words[3]))
             num += Number(words[3]) ;
         }
         const commentData ={
@@ -74,7 +71,6 @@ function Posts(props) {
             time: firebase.firestore.FieldValue.serverTimestamp(),
         }
 
-        console.log("the comment object ", commentData);
         e.target.reset();
 
         props.addComment(commentData, props.postInfo);

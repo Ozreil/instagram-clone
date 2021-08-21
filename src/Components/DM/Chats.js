@@ -18,7 +18,6 @@ function Chats({updatePath, messageData, myUserId}) {
 
         return;
     },[]);
-    console.log("the chat data reference ", sideData);
 
     return (
         <Link to={`/inbox/${updatePath}`}>

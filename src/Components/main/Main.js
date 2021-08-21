@@ -32,7 +32,6 @@ function Main() {
     } 
 
     fetchData(); 
-    console.log("the data main in useeffect ", newUserData);
     
   },[currentUserData]);
 
@@ -218,15 +217,11 @@ function Main() {
 
     const onFormSubmit = (e) => {
       e.preventDefault();
-      console.log("The post caaaaaaaption ",captionRef.current.value);
-      console.log("The post imaaaaaaaaaaage  ",imageRef.current.value);
-
       const uploadTask = storage.ref(`users/${newUserData?.userId}/posts/${addPostImg.name}`).put(addPostImg);
 
       let newId = '';
       if(newUserData?.MyPosts.length > 0){
         const oldID = newUserData?.MyPosts[newUserData?.MyPosts.length - 1];
-        console.log("the oldValueeeeeeeeeeeee ", oldID);
         const words = oldID?.split('_');
         newId = words[0] + "_" + (Number(words[1]) + 1);
       }else{
@@ -237,7 +232,7 @@ function Main() {
         "state_changed",
         snapshot =>{},
         error => {
-          console.log("error");
+          console.log("error", error);
         },
         ()=>{
           storage
@@ -280,7 +275,6 @@ function Main() {
   const handleChange = e => {
     if (e.target.files[0]) {
       setAddPostImg(e.target.files[0]);
-      console.log("The Image files ", e.target.files[0]);
     }
   };
 

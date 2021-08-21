@@ -127,14 +127,12 @@ function Profile() {
     const [error, setError] = useState("");
 
     const handlePath = ()=>{
-        console.log("the profile tab is pressed ");
         history.push("/profile");
     }
 
     const createNewMessage = ()=>{
         const roomId = currentUserData.userData?.userId + wnatedUser?.userId + "CHAT";
         if( !currentUserData.userData?.chats.includes(roomId)){
-            console.log("thhhhhhhhhe new message is created ")
             const chats = currentUserData.userData?.chats;
             const otherchats = wnatedUser?.chats;
             chats.push(roomId);

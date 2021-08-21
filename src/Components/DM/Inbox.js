@@ -31,7 +31,6 @@ function Inbox() {
         } 
     
         fetchData(); 
-        console.log("the data index in useeffect ", newUserData);
         return;
         
     },[]);
@@ -40,7 +39,6 @@ function Inbox() {
         //those to select the correct tab between POSTS or SAVED
         const pathname = window.location.pathname.split('/')[2];
         const ID =  pathname ? pathname : "";
-        console.log("the path >> ", ID)
         setChatPath(ID);
     },[]);
 
@@ -48,17 +46,14 @@ function Inbox() {
         
         //to make sure that we got the user
         if(currentUserData.userData){
-            console.log("the new user data in inbox >>>>>>> ", newUserData);
             await userChatsDataBase.onSnapshot((querySnapshot) =>{
                 const items = [];
                 querySnapshot.forEach((doc) => {
                     if(currentUserData.userData.chats.includes(doc.data().roomId)){
                         items.push({chatData: doc.data(), messageId: doc.id});
-                        console.log("the chat data inbox ", doc.data());
                     }
                 });
                 setUserChats(items);
-                console.log("the userChats >>>>> ", userChats);
 
             });
 
